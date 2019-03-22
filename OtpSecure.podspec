@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name          = "OtpSecure"
-  spec.version       = "1.0.0"
+  spec.version       = "1.0.1"
   spec.summary       = "This library allows you to quickly and easily validate otps sent through OtpSecure Service."
   spec.description   = <<-DESC
     This Swift library allows you to quickly and easily validate otps sent through OtpSecure Service using Swift.

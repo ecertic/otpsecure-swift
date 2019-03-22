@@ -22,7 +22,7 @@ struct Constants {
         static let ValidateUrl = String(format: "%s/validate", BaseUrl)
         
         /// The version number of the library.
-        static let Version: String = "1.0.0"
+        static let Version: String = "1.0.1"
     }
 
 }
