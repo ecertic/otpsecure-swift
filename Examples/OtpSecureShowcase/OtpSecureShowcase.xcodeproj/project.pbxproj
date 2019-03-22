@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4798CC18C33614E381B7F38C /* Pods_OtpSecureShowcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9873CB5C7D8EC4E63E81F5C /* Pods_OtpSecureShowcase.framework */; };
 		F16D4261223AD00300F2B9B7 /* ValidateTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D4260223AD00300F2B9B7 /* ValidateTokenViewController.swift */; };
 		F16D426F223EE28800F2B9B7 /* OperationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D426E223EE28800F2B9B7 /* OperationInfoViewController.swift */; };
 		F17BC754223171BD005A0DD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17BC753223171BD005A0DD1 /* AppDelegate.swift */; };
@@ -30,8 +29,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B1A80D4A8F6D5C3E178E7445 /* Pods-OtpSecureShowcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OtpSecureShowcase.debug.xcconfig"; path = "Target Support Files/Pods-OtpSecureShowcase/Pods-OtpSecureShowcase.debug.xcconfig"; sourceTree = "<group>"; };
-		D9873CB5C7D8EC4E63E81F5C /* Pods_OtpSecureShowcase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpSecureShowcase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16D4260223AD00300F2B9B7 /* ValidateTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateTokenViewController.swift; sourceTree = "<group>"; };
 		F16D426E223EE28800F2B9B7 /* OperationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationInfoViewController.swift; sourceTree = "<group>"; };
 		F17BC750223171BD005A0DD1 /* OtpSecureShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtpSecureShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,7 +37,6 @@
 		F17BC75A223171BE005A0DD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17BC75D223171BE005A0DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17BC75F223171BE005A0DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDC071748515B43F000B07FB /* Pods-OtpSecureShowcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OtpSecureShowcase.release.xcconfig"; path = "Target Support Files/Pods-OtpSecureShowcase/Pods-OtpSecureShowcase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4798CC18C33614E381B7F38C /* Pods_OtpSecureShowcase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,19 +53,8 @@
 		1A70D1F94509DD4DFA7F0FE1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B1A80D4A8F6D5C3E178E7445 /* Pods-OtpSecureShowcase.debug.xcconfig */,
-				FDC071748515B43F000B07FB /* Pods-OtpSecureShowcase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		57F3D87DB8286F3682262700 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D9873CB5C7D8EC4E63E81F5C /* Pods_OtpSecureShowcase.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F16D4262223AD08C00F2B9B7 /* Controllers */ = {
@@ -88,7 +72,6 @@
 				F17BC752223171BD005A0DD1 /* OtpSecureShowcase */,
 				F17BC751223171BD005A0DD1 /* Products */,
 				1A70D1F94509DD4DFA7F0FE1 /* Pods */,
-				57F3D87DB8286F3682262700 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,12 +103,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F17BC76D223171BE005A0DD1 /* Build configuration list for PBXNativeTarget "OtpSecureShowcase" */;
 			buildPhases = (
-				E6EDD5FF4F08CAA7133F7C8C /* [CP] Check Pods Manifest.lock */,
 				F17BC74C223171BD005A0DD1 /* Sources */,
 				F17BC74D223171BD005A0DD1 /* Frameworks */,
 				F17BC74E223171BD005A0DD1 /* Resources */,
 				F17BC7C92231748B005A0DD1 /* Embed Frameworks */,
-				EBC7435621921571C07400DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,53 +162,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E6EDD5FF4F08CAA7133F7C8C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OtpSecureShowcase-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EBC7435621921571C07400DF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OtpSecureShowcase/Pods-OtpSecureShowcase-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/OtpSecure/OtpSecure.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OtpSecure.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OtpSecureShowcase/Pods-OtpSecureShowcase-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F17BC74C223171BD005A0DD1 /* Sources */ = {
@@ -380,7 +314,6 @@
 		};
 		F17BC76E223171BE005A0DD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1A80D4A8F6D5C3E178E7445 /* Pods-OtpSecureShowcase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -403,7 +336,6 @@
 		};
 		F17BC76F223171BE005A0DD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDC071748515B43F000B07FB /* Pods-OtpSecureShowcase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
