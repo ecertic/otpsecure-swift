@@ -5,6 +5,6 @@ target 'OtpSecureShowcase' do
   use_frameworks!
 
   # Pods for OtpSecureShowcase
-  pod 'OtpSecure', :path => '../../'
+  pod 'OtpSecure', '1.0.0'
 
 end

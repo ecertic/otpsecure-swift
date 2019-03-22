@@ -1,6 +1,11 @@
 # OtpSecure Swift SDK
 
-![swift4.2](https://img.shields.io/badge/swift-v4.2-green.svg) ![macOS](https://img.shields.io/badge/os-macOS-blue.svg) ![iOS](https://img.shields.io/badge/os-iOS-blue.svg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/ecertic/otpsecure-swift/master/LICENSE)
+![swift4.2](https://img.shields.io/badge/swift-v4.2-green.svg)
+![macOS](https://img.shields.io/badge/os-macOS-blue.svg)
+![iOS](https://img.shields.io/badge/os-iOS-blue.svg)
+[![GitHub release](https://img.shields.io/github/release/ecertic/otpsecure-swift.svg)](https://github.com/ecertic/otpsecure-swift/releases)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 This Swift library allows you to quickly and easily validate otps sent through OtpSecure Service using Swift.
 
@@ -8,7 +13,7 @@ This Swift library allows you to quickly and easily validate otps sent through O
 
 ### Prerequisites
 
-What things you need to install the software:
+Things needed to install the software:
 
  - Swift 4.2
  - Xcode 10.1
@@ -17,10 +22,18 @@ What things you need to install the software:
 
 ### With Cocoapods
 
-Add the following to your Podfile:
+Add the following pod to your Podfile:
 
 ```ruby
-pod 'Otpsecure', :git => 'https://github.com/ecertic/otpsecure-swift.git'
+pod 'OtpSecure', '1.0.0'
+```
+
+### With Carthage
+
+Add the following statement in your Cartfile:
+
+```ruby
+github "ecertic/otpsecure-swift" "1.0.0"
 ```
 
  ## Usage
@@ -28,6 +41,9 @@ pod 'Otpsecure', :git => 'https://github.com/ecertic/otpsecure-swift.git'
 In order to use the library, developers must use `OtpSecure` module which exposes functions needed to 
 retrieve operation info by token and to validate tokens against otps.
 
+```swift
+	import OtpSecure
+```
 
 ### Using `OtpSecure.retrieveOperationInfoByToken`
 
@@ -68,10 +84,22 @@ You can validate a token against otp as shown in the following snippet. Sample-a
 
 ## Sample app
 
-This repository includes one sample app inside "Examples" folder.
+This repository includes one sample app inside `Examples` folder. To run the sample project execute the following command:
 
+### With Cocoapods
+
+```ruby
+cd /path/to/otpsecure-swift/Examples/OtpSecureShowcase && pod install
+```
+
+### With Carthage
+```ruby
+cd /path/to/otpsecure-swift/Examples/OtpSecureShowcase && carthage update
+```
+
+Then open the file `OtpSecureShowcase.xcworkspace` and run the project with the desired emulator.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://raw.githubusercontent.com/ecertic/otpsecure-swift/master/LICENSE) file for details.
 

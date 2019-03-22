@@ -1,0 +1,3 @@
+[submodule "Examples/OtpSecureShowcase/Carthage/Checkouts/otpsecure-swift"]
+	path = Examples/OtpSecureShowcase/Carthage/Checkouts/otpsecure-swift
+	url = https://github.com/ecertic/otpsecure-swift.git
