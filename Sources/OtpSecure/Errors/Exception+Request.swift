@@ -12,7 +12,7 @@ public extension Exception {
     
     /// The `Exception.Request` enum contains all the errors thrown by
     /// `Request`.
-    public enum Request: Error, CustomStringConvertible {
+    enum Request: Error, CustomStringConvertible {
         
         // MARK: - Cases
         //======================================================================

@@ -10,7 +10,7 @@ import Foundation
 
 public extension OperationInfo {
     
-    public class Post: Request<OperationInfo>, AutoEncodable {
+    class Post: Request<OperationInfo>, AutoEncodable {
         
         // MARK: - Properties
         //=========================================================================

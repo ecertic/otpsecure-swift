@@ -12,7 +12,7 @@ public extension Exception {
     
     /// The `Exception.OTPSecure` enum contains all the errors thrown by
     /// `Request`.
-    public enum OTPSecure: Error, CustomStringConvertible {
+    enum OTPSecure: Error, CustomStringConvertible {
         
         // MARK: - Cases
         //======================================================================
