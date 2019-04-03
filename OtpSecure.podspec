@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   spec.author        = { "Diego Sepúlveda Blanco" => "d.sepulvedabl@gmail.com" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.platform      = :ios, "12.0"
+  spec.platform      = :ios, "8.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.source        = { :git => "https://github.com/ecertic/otpsecure-swift.git", :tag => "#{spec.version}" }
