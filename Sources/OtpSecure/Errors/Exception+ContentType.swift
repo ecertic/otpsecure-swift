@@ -12,7 +12,7 @@ public extension Exception {
     
     /// The `Exception.ContentType` enum contains all the errors thrown by
     /// `ContentType`.
-    public enum ContentType: Error, CustomStringConvertible {
+    enum ContentType: Error, CustomStringConvertible {
         
         // MARK: - Cases
         //======================================================================

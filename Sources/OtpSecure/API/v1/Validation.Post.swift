@@ -10,7 +10,7 @@ import Foundation
 
 public extension Validation {
     
-    public class Post: Request<Validation>, AutoEncodable {
+    class Post: Request<Validation>, AutoEncodable {
         
         // MARK: - Properties
         //=========================================================================
