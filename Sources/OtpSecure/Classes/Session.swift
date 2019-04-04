@@ -17,7 +17,7 @@ import Foundation
 /// You can also call the `sharedInstance` property of `Session` to get a
 /// singleton instance.  This will allow you to configure the singleton once,
 /// and continually reuse it later without the need to re-configure it.
-open class Session {
+class Session {
     
     // MARK: - Properties
     //=========================================================================
