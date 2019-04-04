@@ -36,7 +36,7 @@ class OperationInfoViewController: UIViewController {
 
     }
     
-    func onOperationInfoRetrieved(result: Result<OperationInfo>) -> Void {
+    func onOperationInfoRetrieved(result: Result<OperationInfo, Error>) -> Void {
         switch result {
         case .success(let data):
             if data.status != nil {

@@ -10,7 +10,6 @@
 		F105550C2241A96300856642 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10554ED2241A96300856642 /* Session.swift */; };
 		F105550D2241A96300856642 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10554EE2241A96300856642 /* Response.swift */; };
 		F105550E2241A96300856642 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10554EF2241A96300856642 /* Request.swift */; };
-		F10555102241A96300856642 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10554F22241A96300856642 /* Result.swift */; };
 		F10555112241A96300856642 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10554F32241A96300856642 /* HTTPMethod.swift */; };
 		F10555122241A96300856642 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10554F52241A96300856642 /* Constants.swift */; };
 		F10555132241A96300856642 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10554F62241A96300856642 /* Validate.swift */; };
@@ -57,7 +56,6 @@
 		F10554ED2241A96300856642 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		F10554EE2241A96300856642 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		F10554EF2241A96300856642 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		F10554F22241A96300856642 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F10554F32241A96300856642 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		F10554F52241A96300856642 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F10554F62241A96300856642 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 		F10554F12241A96300856642 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				F10554F22241A96300856642 /* Result.swift */,
 				F10554F32241A96300856642 /* HTTPMethod.swift */,
 			);
 			path = Enums;
@@ -424,7 +421,6 @@
 				F10555182241A96300856642 /* OperationInfo.Post.swift in Sources */,
 				F10555142241A96300856642 /* EncodingStrategy.swift in Sources */,
 				F10555162241A96300856642 /* ContentType.swift in Sources */,
-				F10555102241A96300856642 /* Result.swift in Sources */,
 				F10555112241A96300856642 /* HTTPMethod.swift in Sources */,
 				F10555212241A96300856642 /* AutoEncodable.swift in Sources */,
 				F10555172241A96300856642 /* OtpSecure.swift in Sources */,
