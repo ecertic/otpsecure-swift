@@ -15,7 +15,7 @@ public class OtpSecure: NSObject {
     /// - Parameters:
     ///   - token: the token id of the operation.
     ///   - completionHandler: the function that will be invoked once the call to the OtpSecure API ends
-    public class func retrieveOperationInfoByToken(token: String, completionHandler: @escaping (Result<OperationInfo>) -> Void = { _ in }) {
+    public class func retrieveOperationInfoByToken(token: String, completionHandler: @escaping (Result<OperationInfo, Error>) -> Void = { _ in }) {
         let operationInfo = OperationInfo.Post(token: token)
         let session = Session()
 
@@ -49,7 +49,7 @@ public class OtpSecure: NSObject {
     ///   - token: the token id of the operation.
     ///   - otp: the user provided otp
     ///   - completionHandler: the function that will be invoked once the call to the OtpSecure API ends
-    public class func validateToken(token: String, otp: String, completionHandler: @escaping (Result<Validation>) -> Void = { _ in }) {
+    public class func validateToken(token: String, otp: String, completionHandler: @escaping (Result<Validation, Error>) -> Void = { _ in }) {
         let validatePostOperation = Validation.Post(token: token, otp: otp)
         let session = Session()
         

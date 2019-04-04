@@ -38,7 +38,7 @@ class ValidateTokenViewController: UIViewController {
 
     }
     
-    func onTokenValidated(result: Result<Validation>) -> Void {        
+    func onTokenValidated(result: Result<Validation, Error>) -> Void {        
         switch result {
         case .success(let data):
             print("Success --> data: \(data)")
