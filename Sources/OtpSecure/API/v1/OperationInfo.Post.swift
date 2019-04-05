@@ -28,14 +28,6 @@ public extension OperationInfo {
             self.token = token
             super.init(method: .POST, contentType: .json, path: "/token")
         }
-        
-        // MARK: - Methods
-        //=========================================================================
-        
-        /// Validates that the end date (if present) is not earlier than the start
-        /// date.
-        public override func validate() throws {
-            try super.validate()
-        }
+
     }
 }

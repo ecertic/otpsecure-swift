@@ -33,14 +33,6 @@ public extension Validation {
             self.otp = otp
             super.init(method: .POST, contentType: .json, path: "/validate")
         }
-        
-        // MARK: - Methods
-        //=========================================================================
-        
-        /// Validates that the end date (if present) is not earlier than the start
-        /// date.
-        public override func validate() throws {
-            try super.validate()
-        }
+
     }
 }
