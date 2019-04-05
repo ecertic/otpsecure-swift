@@ -12,7 +12,7 @@ import Foundation
 /// a quick way to retrieve the encoded representation of the object.
 public protocol AutoEncodable: Encodable {
     
-    /// The date and date encoding strategy.
+    /// The data and date encoding strategy.
     var encodingStrategy: EncodingStrategy { get }
     
     /// The encoded data representation.
