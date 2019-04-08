@@ -32,16 +32,7 @@ struct Environment: Encodable {
     
     /// The device's IP
     public var ip: String?
-    
-    /// The device's MAC
-    public var mac: String?
-    
-    /// The SIM device's ICCID
-    public var iccid: String?
-    
-    /// The SIM device's IMEI
-    public var imei: String?
-    
+        
     /// The device's location
     public var location: Coordinate?
     
