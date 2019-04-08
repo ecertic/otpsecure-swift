@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension OperationInfo {
+extension OperationInfo {
     
     class Post: Request<OperationInfo>, AutoEncodable {
         
@@ -16,7 +16,7 @@ public extension OperationInfo {
         //=========================================================================
         
         /// The token
-        public let token: String
+        let token: String
 
         // MARK: - Initialization
         //=========================================================================
@@ -24,18 +24,10 @@ public extension OperationInfo {
         /// Initializes the request with a token
         /// - Parameters:
         ///   - token:  The token.
-        public init(token: String) {
+        init(token: String) {
             self.token = token
             super.init(method: .POST, contentType: .json, path: "/token")
         }
-        
-        // MARK: - Methods
-        //=========================================================================
-        
-        /// Validates that the end date (if present) is not earlier than the start
-        /// date.
-        public override func validate() throws {
-            try super.validate()
-        }
+
     }
 }

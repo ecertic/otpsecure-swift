@@ -1,7 +1,7 @@
 # OtpSecure Swift SDK
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/ecertic/otpsecure-swift/master/LICENSE)
-![swift4.2](https://img.shields.io/badge/swift-v4.2-green.svg)
+![swift5](https://img.shields.io/badge/swift-v5-green.svg)
 ![macOS](https://img.shields.io/badge/os-macOS-blue.svg)
 ![iOS](https://img.shields.io/badge/os-iOS-blue.svg)
 [![GitHub release](https://img.shields.io/github/release/ecertic/otpsecure-swift.svg)](https://github.com/ecertic/otpsecure-swift/releases)
@@ -15,8 +15,8 @@ This Swift library allows you to quickly and easily validate otps sent through O
 
 Things needed to install the software:
 
- - Swift 4.2
- - Xcode 10.1
+ - Swift 5
+ - Xcode 10.2
  
  ## Installation
 

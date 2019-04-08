@@ -9,9 +9,12 @@
 import UIKit
 
 import OtpSecure
+import CoreLocation
 
 class OperationInfoViewController: UIViewController {
     
+    let locationManager = CLLocationManager()
+
     let FROM_OPERATION_INFO_TO_VALIDATE_TOKEN_VC = "toValidateTokenViewController"
     
     var token: String = ""
@@ -74,6 +77,8 @@ class OperationInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        locationManager.requestWhenInUseAuthorization()
     }
     
 }
