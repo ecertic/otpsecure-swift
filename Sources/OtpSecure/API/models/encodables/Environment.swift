@@ -16,23 +16,20 @@ struct Environment: Encodable {
     //=========================================================================
 
     /// The device id
-    public var deviceId: String!
+    public var devUuid: String!
 
     /// The device model
-    public var deviceModel: String!
+    public var device: String!
 
     /// The carrier names
     public var carriers: [String]?
 
-    /// The OS name
-    public var osName: String!
-    
-    /// The OS version
-    public var osVersion: String!
-    
+    /// The OS name and version
+    public var os: String!
+        
     /// The device's IP
     public var ip: String?
-        
+    
     /// The device's location
     public var location: Coordinate?
     

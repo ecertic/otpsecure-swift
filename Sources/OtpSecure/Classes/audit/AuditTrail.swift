@@ -32,11 +32,10 @@ class AuditTrail {
         AuditTrail.completionHandler = completionHandler
 
         var env = Environment()
-        env.deviceId = UIDevice.current.identifierForVendor!.uuidString
-        env.deviceModel = AuditTrail.getDeviceModel()
+        env.devUuid = UIDevice.current.identifierForVendor!.uuidString
+        env.device = AuditTrail.getDeviceModel()
         env.carriers = AuditTrail.getCarriers()
-        env.osName = UIDevice.current.systemName
-        env.osVersion = UIDevice.current.systemVersion
+        env.os = "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
         env.ip = AuditTrail.getIp()
         AuditTrail.environment = env
 
