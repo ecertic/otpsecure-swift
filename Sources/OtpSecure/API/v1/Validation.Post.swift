@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Validation {
+extension Validation {
     
     class Post: Request<Validation>, AutoEncodable {
         
@@ -16,10 +16,13 @@ public extension Validation {
         //=========================================================================
         
         /// The token
-        public let token: String
+        let token: String
 
         /// The OTP
-        public let otp: String
+        let otp: String
+
+        /// The environment object
+        let env: Environment!
 
         // MARK: - Initialization
         //=========================================================================
@@ -27,10 +30,12 @@ public extension Validation {
         /// Initializes the request with a token
         /// - Parameters:
         ///   - token:  The token.
-        ////  - otp: The OTP
-        public init(token: String, otp: String) {
+        ///   - otp: The OTP
+        ///   - env: The audit trail data to send
+        init(token: String, otp: String, env: Environment) {
             self.token = token
             self.otp = otp
+            self.env = env
             super.init(method: .POST, contentType: .json, path: "/validate")
         }
 

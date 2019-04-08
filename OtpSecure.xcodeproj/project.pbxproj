@@ -39,7 +39,12 @@
 		F10555402241A98F00856642 /* XCTFailUnknownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10555342241A98F00856642 /* XCTFailUnknownError.swift */; };
 		F10555412241A98F00856642 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10555352241A98F00856642 /* TestConstants.swift */; };
 		F10555472243A36900856642 /* OtpSecure.h in Headers */ = {isa = PBXBuildFile; fileRef = F10555462243A36900856642 /* OtpSecure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F14E6CB0225650AC006A4383 /* Exception+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E6CAF225650AC006A4383 /* Exception+Location.swift */; };
+		F1A0F0EA2254AFAB00509042 /* AuditTrail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0F0E92254AFAB00509042 /* AuditTrail.swift */; };
+		F1A0F0EC2254AFDF00509042 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0F0EB2254AFDF00509042 /* LocationManager.swift */; };
+		F1A0F0EE2254B92700509042 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0F0ED2254B92700509042 /* Coordinate.swift */; };
 		F1B85F2122410A01004E6086 /* OtpSecure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17BC7252231511F005A0DD1 /* OtpSecure.framework */; };
+		F1CD06D6225658D300875470 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD06D5225658D300875470 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +92,13 @@
 		F10555352241A98F00856642 /* TestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
 		F10555362241A98F00856642 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F10555462243A36900856642 /* OtpSecure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtpSecure.h; sourceTree = "<group>"; };
+		F14E6CAF225650AC006A4383 /* Exception+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exception+Location.swift"; sourceTree = "<group>"; };
 		F17BC7252231511F005A0DD1 /* OtpSecure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OtpSecure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1A0F0E92254AFAB00509042 /* AuditTrail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuditTrail.swift; sourceTree = "<group>"; };
+		F1A0F0EB2254AFDF00509042 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F1A0F0ED2254B92700509042 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		F1B85F1C22410A01004E6086 /* OtpSecureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtpSecureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1CD06D5225658D300875470 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +147,10 @@
 		F10554EC2241A96300856642 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F10554ED2241A96300856642 /* Session.swift */,
-				F10554EE2241A96300856642 /* Response.swift */,
+				F1CD06D92257B0F700875470 /* audit */,
 				F10554EF2241A96300856642 /* Request.swift */,
+				F10554EE2241A96300856642 /* Response.swift */,
+				F10554ED2241A96300856642 /* Session.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -156,10 +167,10 @@
 			isa = PBXGroup;
 			children = (
 				F10554F52241A96300856642 /* Constants.swift */,
-				F10554F62241A96300856642 /* Validate.swift */,
+				F10554F92241A96300856642 /* ContentType.swift */,
 				F10554F72241A96300856642 /* EncodingStrategy.swift */,
 				F10554F82241A96300856642 /* DecodingStrategy.swift */,
-				F10554F92241A96300856642 /* ContentType.swift */,
+				F10554F62241A96300856642 /* Validate.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -185,9 +196,8 @@
 		F10554FF2241A96300856642 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				F10555002241A96300856642 /* OperationInfo.swift */,
-				F10555012241A96300856642 /* Check.swift */,
-				F10555022241A96300856642 /* Validation.swift */,
+				F1CD06D72257566A00875470 /* encodables */,
+				F1CD06D82257568500875470 /* decodables */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -196,8 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				F10555042241A96300856642 /* Exception.swift */,
-				F10555052241A96300856642 /* Exception+OTPSecure.swift */,
 				F10555062241A96300856642 /* Exception+ContentType.swift */,
+				F14E6CAF225650AC006A4383 /* Exception+Location.swift */,
+				F10555052241A96300856642 /* Exception+OTPSecure.swift */,
 				F10555072241A96300856642 /* Exception+Request.swift */,
 			);
 			path = Errors;
@@ -296,6 +307,34 @@
 				F1B85F1C22410A01004E6086 /* OtpSecureTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F1CD06D72257566A00875470 /* encodables */ = {
+			isa = PBXGroup;
+			children = (
+				F1A0F0ED2254B92700509042 /* Coordinate.swift */,
+				F1CD06D5225658D300875470 /* Environment.swift */,
+			);
+			path = encodables;
+			sourceTree = "<group>";
+		};
+		F1CD06D82257568500875470 /* decodables */ = {
+			isa = PBXGroup;
+			children = (
+				F10555012241A96300856642 /* Check.swift */,
+				F10555002241A96300856642 /* OperationInfo.swift */,
+				F10555022241A96300856642 /* Validation.swift */,
+			);
+			path = decodables;
+			sourceTree = "<group>";
+		};
+		F1CD06D92257B0F700875470 /* audit */ = {
+			isa = PBXGroup;
+			children = (
+				F1A0F0E92254AFAB00509042 /* AuditTrail.swift */,
+				F1A0F0EB2254AFDF00509042 /* LocationManager.swift */,
+			);
+			path = audit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +458,7 @@
 				F10555132241A96300856642 /* Validate.swift in Sources */,
 				F105551C2241A96300856642 /* Validation.swift in Sources */,
 				F10555182241A96300856642 /* OperationInfo.Post.swift in Sources */,
+				F14E6CB0225650AC006A4383 /* Exception+Location.swift in Sources */,
 				F10555142241A96300856642 /* EncodingStrategy.swift in Sources */,
 				F10555162241A96300856642 /* ContentType.swift in Sources */,
 				F10555112241A96300856642 /* HTTPMethod.swift in Sources */,
@@ -427,9 +467,13 @@
 				F105551D2241A96300856642 /* Exception.swift in Sources */,
 				F105550C2241A96300856642 /* Session.swift in Sources */,
 				F10555122241A96300856642 /* Constants.swift in Sources */,
+				F1A0F0EE2254B92700509042 /* Coordinate.swift in Sources */,
 				F105551E2241A96300856642 /* Exception+OTPSecure.swift in Sources */,
+				F1CD06D6225658D300875470 /* Environment.swift in Sources */,
 				F10555192241A96300856642 /* Validation.Post.swift in Sources */,
+				F1A0F0EA2254AFAB00509042 /* AuditTrail.swift in Sources */,
 				F10555222241A96300856642 /* Validatable.swift in Sources */,
+				F1A0F0EC2254AFDF00509042 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

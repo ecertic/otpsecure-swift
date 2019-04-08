@@ -16,7 +16,7 @@ class ValidatePostTest: XCTestCase {
         // Create an expectation for a background request.
         let expectation = XCTestExpectation(description: "Validate token operation")
 
-        let validatePostOperation = Validation.Post(token: TestConstants.Token.ValidToken, otp: TestConstants.Otp.InvalidOtp)
+        let validatePostOperation = Validation.Post(token: TestConstants.Token.ValidToken, otp: TestConstants.Otp.InvalidOtp, env: Environment())
         let session = Session()
         
         session.send(request: validatePostOperation, completionHandler: {
@@ -40,7 +40,7 @@ class ValidatePostTest: XCTestCase {
         // Create an expectation for a background request.
         let expectation = XCTestExpectation(description: "Validate token operation")
 
-        let validatePostOperation = Validation.Post(token: TestConstants.Token.InvalidToken, otp: TestConstants.Otp.InvalidOtp)
+        let validatePostOperation = Validation.Post(token: TestConstants.Token.InvalidToken, otp: TestConstants.Otp.InvalidOtp, env: Environment())
         let session = Session()
         
         session.send(request: validatePostOperation, completionHandler: {
