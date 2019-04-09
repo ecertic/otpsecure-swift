@@ -1,16 +1,16 @@
 PODS:
-  - OtpSecure (1.0.1)
+  - OtpSecure (2.0.0)
 
 DEPENDENCIES:
-  - OtpSecure (= 1.0.1)
+  - OtpSecure (= 2.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - OtpSecure
 
 SPEC CHECKSUMS:
-  OtpSecure: c84a9292f9d69261f91272cb868db3625ead8ff9
+  OtpSecure: 9c20dacf4a5cca7cef4d46488f97d1ce1da6d9a0
 
-PODFILE CHECKSUM: 2f7005f8cd8fee9fe722ea0394df1d98206e6b04
+PODFILE CHECKSUM: 0540408e1643beb3e75d25f42d0b01904cc214c2
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.0.beta.3
