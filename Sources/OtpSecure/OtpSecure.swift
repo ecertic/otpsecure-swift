@@ -50,20 +50,11 @@ public class OtpSecure: NSObject {
     ///   - otp: the user provided otp
     ///   - completionHandler: the function that will be invoked once the call to the OtpSecure API ends
     public class func validateToken(token: String, otp: String, completionHandler: @escaping (Result<Validation, Error>) -> Void = { _ in }) {
-        AuditTrail.build(completionHandler: {
-            result in
-            
-            let env: Environment!
-            switch result {
-            case .success(let environment):
-                env = environment
-            case .failure(_):
-                env = nil
-            }
-            
-            let validatePostOperation = Validation.Post(token: token, otp: otp, env: env)
-            let session = Session()
         
+        DispatchQueue.global().async {
+            let validatePostOperation = Validation.Post(token: token, otp: otp, env: Environment.build())
+            let session = Session()
+
             session.send(request: validatePostOperation, completionHandler: {
                 response in
                 
@@ -87,7 +78,7 @@ public class OtpSecure: NSObject {
                 
                 return completionHandler(.success(validationRetrieved))
             })
-        })
+        }
     }
 
 }
