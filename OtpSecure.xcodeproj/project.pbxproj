@@ -39,8 +39,6 @@
 		F10555402241A98F00856642 /* XCTFailUnknownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10555342241A98F00856642 /* XCTFailUnknownError.swift */; };
 		F10555412241A98F00856642 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10555352241A98F00856642 /* TestConstants.swift */; };
 		F10555472243A36900856642 /* OtpSecure.h in Headers */ = {isa = PBXBuildFile; fileRef = F10555462243A36900856642 /* OtpSecure.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F14E6CB0225650AC006A4383 /* Exception+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E6CAF225650AC006A4383 /* Exception+Location.swift */; };
-		F1A0F0EA2254AFAB00509042 /* AuditTrail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0F0E92254AFAB00509042 /* AuditTrail.swift */; };
 		F1A0F0EC2254AFDF00509042 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0F0EB2254AFDF00509042 /* LocationManager.swift */; };
 		F1A0F0EE2254B92700509042 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0F0ED2254B92700509042 /* Coordinate.swift */; };
 		F1B85F2122410A01004E6086 /* OtpSecure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17BC7252231511F005A0DD1 /* OtpSecure.framework */; };
@@ -92,9 +90,7 @@
 		F10555352241A98F00856642 /* TestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
 		F10555362241A98F00856642 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F10555462243A36900856642 /* OtpSecure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtpSecure.h; sourceTree = "<group>"; };
-		F14E6CAF225650AC006A4383 /* Exception+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exception+Location.swift"; sourceTree = "<group>"; };
 		F17BC7252231511F005A0DD1 /* OtpSecure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OtpSecure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1A0F0E92254AFAB00509042 /* AuditTrail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuditTrail.swift; sourceTree = "<group>"; };
 		F1A0F0EB2254AFDF00509042 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F1A0F0ED2254B92700509042 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		F1B85F1C22410A01004E6086 /* OtpSecureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtpSecureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,7 +203,6 @@
 			children = (
 				F10555042241A96300856642 /* Exception.swift */,
 				F10555062241A96300856642 /* Exception+ContentType.swift */,
-				F14E6CAF225650AC006A4383 /* Exception+Location.swift */,
 				F10555052241A96300856642 /* Exception+OTPSecure.swift */,
 				F10555072241A96300856642 /* Exception+Request.swift */,
 			);
@@ -331,7 +326,6 @@
 		F1CD06D92257B0F700875470 /* audit */ = {
 			isa = PBXGroup;
 			children = (
-				F1A0F0E92254AFAB00509042 /* AuditTrail.swift */,
 				F1A0F0EB2254AFDF00509042 /* LocationManager.swift */,
 			);
 			path = audit;
@@ -458,7 +452,6 @@
 				F10555132241A96300856642 /* Validate.swift in Sources */,
 				F105551C2241A96300856642 /* Validation.swift in Sources */,
 				F10555182241A96300856642 /* OperationInfo.Post.swift in Sources */,
-				F14E6CB0225650AC006A4383 /* Exception+Location.swift in Sources */,
 				F10555142241A96300856642 /* EncodingStrategy.swift in Sources */,
 				F10555162241A96300856642 /* ContentType.swift in Sources */,
 				F10555112241A96300856642 /* HTTPMethod.swift in Sources */,
@@ -471,7 +464,6 @@
 				F105551E2241A96300856642 /* Exception+OTPSecure.swift in Sources */,
 				F1CD06D6225658D300875470 /* Environment.swift in Sources */,
 				F10555192241A96300856642 /* Validation.Post.swift in Sources */,
-				F1A0F0EA2254AFAB00509042 /* AuditTrail.swift in Sources */,
 				F10555222241A96300856642 /* Validatable.swift in Sources */,
 				F1A0F0EC2254AFDF00509042 /* LocationManager.swift in Sources */,
 			);

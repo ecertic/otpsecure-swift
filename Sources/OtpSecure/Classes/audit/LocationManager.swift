@@ -14,37 +14,52 @@ import CoreLocation
 /// received after obtaining it
 class LocationManager: NSObject {
 
-    /// The completitionHandler received to execute when the location is retrieved
-    private static var completionHandler: ((Result<Coordinate, Error>) -> Void)!
+    /// The object in charge of blocking the thread until the
+    /// location has been obtained or the timeout has skipped
+    private var semaphore: DispatchSemaphore!
     
-    /// The object that is used to start and stop the delivery of location-related events.
-    private static let locationManager = CLLocationManager()
-    
-    /// Class that implements the CLLocationManagerDelegate protocol functions
-    private static let delegate = LocationManager()
+    /// The object that is used to start and stop the delivery
+    /// of location-related events.
+    private var locationManager: CLLocationManager!
 
-    /// Get the location of the device and run the completitionHandler
-    /// received as a parameter after obtaining it
-    public static func getCurrentLocation(completionHandler: @escaping (Result<Coordinate, Error>) -> Void = { _ in }) {
-        
-        LocationManager.completionHandler = completionHandler
-        
+    /// The object that will store the obtained location
+    private var position: Coordinate?
+
+    // MARK: - Initialization
+    //=========================================================================
+    
+    /// Initializes the locationManager and related properties.
+    public override init() {
+        self.semaphore = DispatchSemaphore(value: 0)
+    
+        super.init()
+    
+        DispatchQueue.main.sync(execute: {
+            locationManager = CLLocationManager()
+        })
+    }
+    
+    public func getLocation() -> Coordinate? {
         // Do not start services that aren't available.
         if !CLLocationManager.locationServicesEnabled() {
             // Location services is not available.
-            completionHandler(.failure(Exception.Location.locationServicesNotEnabled))
+            return nil
         }
 
         let authorizationStatus = CLLocationManager.authorizationStatus()
         if authorizationStatus != .authorizedWhenInUse && authorizationStatus != .authorizedAlways {
-            completionHandler(.failure(Exception.Location.locationServicesNotAllowed))
+            return nil
         }
         
-        locationManager.delegate = delegate
+        locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+        
+        let _ = self.semaphore.wait(timeout: .now() + .milliseconds(500))
+        
+        return self.position
     }
 
 }
@@ -57,11 +72,12 @@ extension LocationManager: CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         manager.stopUpdatingLocation()
         let coordinate = Coordinate(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
-        LocationManager.completionHandler(.success(coordinate))
+        self.position = coordinate
+        self.semaphore.signal()
     }
     
     /// :nodoc:
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        LocationManager.completionHandler(.failure(error))
+        self.semaphore.signal()
     }
 }
