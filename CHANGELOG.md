@@ -1,3 +1,6 @@
+### 2.0.1
+* Improve getting location
+
 ### 2.0.0
 * Upgrade to Swift 5
 * Support iOS 8 and above

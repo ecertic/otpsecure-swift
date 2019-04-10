@@ -25,7 +25,7 @@ Things needed to install the software:
 Add the following pod to your Podfile:
 
 ```ruby
-pod 'OtpSecure', '2.0.0'
+pod 'OtpSecure', '2.0.1'
 ```
 
 ### With Carthage
@@ -33,7 +33,7 @@ pod 'OtpSecure', '2.0.0'
 Add the following statement in your Cartfile:
 
 ```ruby
-github "ecertic/otpsecure-swift" "2.0.0"
+github "ecertic/otpsecure-swift" "2.0.1"
 ```
 
  ## Usage
